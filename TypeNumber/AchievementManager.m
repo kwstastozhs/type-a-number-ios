@@ -26,7 +26,7 @@
 
 -(void)unlockAchievement:(NSString *)achievementId;
 {
-  
+
   GPGAchievement *unlockMe = [GPGAchievement achievementWithId:achievementId];
   
   [unlockMe unlockAchievementWithCompletionHandler:^(BOOL newlyUnlocked, NSError *error) {

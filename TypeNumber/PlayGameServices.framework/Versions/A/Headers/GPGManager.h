@@ -7,8 +7,7 @@
 
 #import "GPGEnums.h"
 
-typedef void (^GPGReAuthenticationBlock)(BOOL requiresKeychainWipe,
-                                         NSError *error);
+typedef void (^GPGReAuthenticationBlock)(BOOL requiresKeychainWipe, NSError *error);
 typedef void (^GPGRevisionCheckBlock)(GPGRevisionStatus revisionStatus, NSError *error);
 
 @class GPGApplicationModel;
@@ -32,6 +31,7 @@ extern NSString * const GPGUserDidSignOutNotification;
 
 - (void)signIn:(GPPSignIn *)signIn
     reauthorizeHandler:(GPGReAuthenticationBlock)reauthenticationBlock;
+
 
 #pragma mark Device Orientation 
 @property(nonatomic, readwrite, assign) NSUInteger validOrientationFlags;

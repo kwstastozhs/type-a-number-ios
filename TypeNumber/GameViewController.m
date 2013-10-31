@@ -199,11 +199,13 @@
   [GPPShare sharedInstance].delegate = self;
   
   // Let's create the share dialog now!
-  id<GPPShareBuilder> shareDialog = [share shareDialog];
+  id<GPPShareBuilder> shareDialog = [share nativeShareDialog];
   
-  [shareDialog setPrefillText:prefillText];
+  //[shareDialog setPrefillText:prefillText];
   [shareDialog setContentDeepLinkID:encodedID];
-  [shareDialog setTitle:@"Oh yeah" description:@"poor thing" thumbnailURL:nil];
+  // This line is unused
+  [shareDialog setTitle:@"Oh yeah" description:@"You will never see this" thumbnailURL:nil];
+  [shareDialog setPrefillText:prefillText];
   [shareDialog setURLToShare:webLink];
   [shareDialog setCallToActionButtonWithLabel:@"PLAY" URL:webLink deepLinkID:encodedID];
   [shareDialog open];

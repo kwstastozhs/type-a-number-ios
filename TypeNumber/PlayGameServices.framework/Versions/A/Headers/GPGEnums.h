@@ -46,6 +46,7 @@ typedef enum {
   GPGLeaderboardOrderSmallerIsBetter,
 } GPGLeaderboardOrder;
 
+
 #pragma mark - App State
 
 // Status returned when a client tries to load app state data.
@@ -96,4 +97,5 @@ typedef enum {
   // Revision is invalid and will not work.
   GPGRevisionStatusInvalid,
 } GPGRevisionStatus;
+
 

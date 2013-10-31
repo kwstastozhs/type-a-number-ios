@@ -20,10 +20,11 @@ typedef void (^GPGAppStateListKeysHandler)(NSArray *states, NSNumber *maxKeyCoun
 
 typedef void (^GPGAppStateLoadResultHandler)(GPGAppStateLoadStatus status, NSError *error);
 
-typedef void (^GPGAppStateWriteResultHandler)(GPGAppStateWriteStatus status,
-                                               NSError *error);
+typedef void (^GPGAppStateWriteResultHandler)(GPGAppStateWriteStatus status, NSError *error);
 
-typedef NSData *(^GPGAppStateConflictHandler)(NSNumber *key, NSData *localState, NSData *remoteState);
+typedef NSData * (^GPGAppStateConflictHandler)(NSNumber *key,
+                                               NSData *localState,
+                                               NSData *remoteState);
 
 @interface GPGAppStateModel : NSObject
 

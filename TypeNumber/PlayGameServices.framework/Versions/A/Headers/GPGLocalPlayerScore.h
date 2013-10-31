@@ -17,6 +17,8 @@
 
 @property (nonatomic, readonly, assign) unsigned long long scoreValue;
 
+@property (nonatomic, readonly, copy) NSString *scoreTag;
+
 @property (nonatomic, readonly, retain) GPGLocalPlayerRank *socialRank;
 
 @property (nonatomic, readonly, assign) long long writeTimestamp;

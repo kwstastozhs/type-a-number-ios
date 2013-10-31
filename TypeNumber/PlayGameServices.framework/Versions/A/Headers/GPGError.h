@@ -10,11 +10,12 @@ extern NSString *const GPGErrorDomain;
 enum {
   GPGInvalidAuthenticationError = 1, // No valid authentication found. You must authenticate the user before executing the action that returned this error.
 
-  GPGNetworkUnavailableError = 2, // The network is offline, a network operation cannot be completed.
+  GPGNetworkUnavailableError, // The network is offline, a network operation cannot be completed.
 
-  GPGServiceMethodFailedError = 3, // A method from the games service failed.
+  GPGServiceMethodFailedError, // A method from the games service failed.
 
-  GPGRevisionStaleError = 4, // Current SDK version is either deprecated or invalid.
+  GPGRevisionStaleError, // Current SDK version is either deprecated or invalid.
+
 };
 
 @interface GPGError : NSError

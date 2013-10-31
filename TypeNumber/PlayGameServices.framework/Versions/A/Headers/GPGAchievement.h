@@ -11,6 +11,8 @@ typedef void (^GPGAchievementDidUnlockBlock)(BOOL newlyUnlocked, NSError *error)
 typedef void (^GPGAchievementDidIncrementBlock)(
     BOOL newlyUnlocked, int currentSteps, NSError *error);
 typedef void (^GPGAchievementDidRevealBlock)(GPGAchievementState state, NSError *error);
+typedef void (^GPGAchievementDidResetBlock)(NSError *error);
+typedef void (^GPGAllAchievementsDidResetBlock)(NSError *error);
 
 @interface GPGAchievement : NSObject
 
@@ -35,5 +37,10 @@ typedef void (^GPGAchievementDidRevealBlock)(GPGAchievementState state, NSError 
 
 - (void)incrementAchievementNumSteps:(NSInteger)steps
                    completionHandler:(GPGAchievementDidIncrementBlock)completionHandler;
+
+- (void)resetAchievementWithCompletionHandler:(GPGAchievementDidResetBlock)completionHandler;
+
++ (void)resetAllAchievementsWithCompletionHandler:
+      (GPGAllAchievementsDidResetBlock)completionHandler;
 
 @end
